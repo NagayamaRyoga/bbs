@@ -1,3 +1,9 @@
+<%= render 'shared/navbar' %>
+
 <main>
-  <h1>BBS</h1>
+  <% @posts.each do |post| %>
+    <%= render 'shared/post', post: post %>
+  <% end %>
+
+  <%= render 'posts/form', post: @new_post %>
 </main>

@@ -11,17 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.text_field :user_name, :placeholder => "名前" %>
+  <%= form.text_area :content %>
+  <%= form.submit "投稿" %>
 <% end %>

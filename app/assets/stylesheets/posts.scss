@@ -1,3 +1,53 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.post {
+  margin: 1em 0;
+  padding: 1em 1em;
+  background-color: #4d4d4d;
+  border-left: solid 4px rgb(60, 240, 100);
+
+  .header {
+    padding: 0.25em 0em;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .body {
+    padding: 0.25em 0.5em;
+  }
+}
+
+form {
+  display: block;
+
+  label, input, textarea {
+    display: block;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0.5em 0.5em;
+    border-width: 1px;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    font-size: 1.0em;
+    font-family: Arial;
+  }
+
+  textarea {
+    height: 5em;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    $color: rgb(87, 175, 240);
+    $border-color: $color * 1.2;
+    padding: 0.5em 1.2em;
+    color: rgba(255, 255, 255, 1);
+    background-color: $color;
+    font-size: 1.1em;
+    font-weight: bolder;
+    border: solid 1px $border-color;
+    border-radius: 0.25em;
+  }
+}
