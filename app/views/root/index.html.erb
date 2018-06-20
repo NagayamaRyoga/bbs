@@ -1,9 +1,9 @@
 <%= render 'shared/navbar' %>
 
 <main>
-  <% @posts.each do |post| %>
+  <%= render 'posts/form', post: @new_post %>
+
+  <% @posts.reverse.each do |post| %>
     <%= render 'shared/post', post: post %>
   <% end %>
-
-  <%= render 'posts/form', post: @new_post %>
 </main>
