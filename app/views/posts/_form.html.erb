@@ -1,17 +1,12 @@
 <%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |name, messages| %>
+      <%= name %>
+      <%= messages %>
+    <% end %>
   <% end %>
 
-  <%= form.text_field :user_name, :placeholder => "名前" %>
-  <%= form.text_area :content %>
+  <%= form.text_field :user_name, :placeholder => "名前", :required => true, :maxlength => 128 %>
+  <%= form.text_area :content, :placeholder => "コメント", :required => true, :maxlength => 1024  %>
   <%= form.submit "投稿" %>
 <% end %>

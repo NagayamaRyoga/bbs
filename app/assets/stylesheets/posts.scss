@@ -9,10 +9,12 @@
     font-size: 1.2em;
     font-weight: bolder;
     color: rgba(255, 255, 255, 0.95);
+    word-break: break-all;
   }
 
   .body {
     padding: 0.25em 0.5em;
+    word-break: break-all;
   }
 
   .footer {
@@ -22,6 +24,7 @@
     font-weight: lighter;
     color: rgba(255, 255, 255, 0.72);
     text-align: right;
+    word-break: break-all;
   }
 }
 
@@ -45,8 +48,8 @@ form {
   }
 
   textarea {
-    height: 5em;
-    resize: none;
+    height: 8em;
+    resize: vertical;
   }
 
   input[type="submit"] {
