@@ -14,10 +14,20 @@
   .body {
     padding: 0.25em 0.5em;
   }
+
+  .footer {
+    padding: 0.25em 0em;
+    font-size: 0.8em;
+    font-family: Arial;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.72);
+    text-align: right;
+  }
 }
 
 form {
   display: block;
+  margin: 2em 0;
 
   label, input, textarea {
     display: block;
